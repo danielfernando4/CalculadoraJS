@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     width: 100%;
     max-width: 350px; 
-    height: 500px;
+    height: 560px;
     background-color: rgb(0, 0, 0);
     border-radius: 14px;
 }
@@ -73,5 +73,25 @@ body {
 }
 
 #btn-container button.btn-side:hover {
+    background-color: rgb(22, 87, 22);
+}
+
+
+
+
+#btn-historial {
+    height: 50px;
+    width: 280px;
+    margin-left: 30px;
+    margin-top: 12px;
+    background-color: rgb(30, 112, 30);
+    border: none;
+    border-radius: 15px;
+    font-family: "sans-serif";
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#btn-historial:hover {
     background-color: rgb(22, 87, 22);
 }

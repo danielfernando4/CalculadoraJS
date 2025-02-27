@@ -11,6 +11,9 @@ printField.value = ""
 let isAnswer = false;
 let isError = false;
 
+window.operationHistorial = [];
+window.operationResult = [];
+
 for (let i = 0; i < buttonsContainer.length - 3; i++) {
 
     
@@ -48,9 +51,11 @@ equalBtn.addEventListener("click", () => {
     //alert(regex.test(printField.value));
 
     if(regex.test(printField.value)){
+        window.operationHistorial.push(printField.value);
         let resultStr = printField.value.replace(/×/g, '*').replace(/÷/g, '/');
         const result = new Function("return " + resultStr);
         printField.value = result();
+        window.operationResult.push(printField.value);
         isAnswer = true;
     }else{
         printField.value = "syntax error!!!";

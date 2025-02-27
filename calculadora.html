@@ -6,6 +6,7 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='calculadora.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='historial.css'>
 </head>
 <body>
     <div class="calculadora-container">
@@ -41,9 +42,21 @@
             
             
         </div>
+
+        <button id="btn-historial">historial de operaciones</button>
+    </div>
+
+    <div id="historial-container">
+        <h2>historial de operaciones</h2>
+        
+        <div id="operation-container">
+        </div>
+        
+        <button id="btn-cerrar-historial">cerrar</button>
     </div>
 
     
 </body>
 <script src='calculadora.js'></script>
+<script src='historial.js'></script>
 </html>

@@ -1,0 +1,45 @@
+
+#historial-container {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; 
+    height: 700px;
+    background-color: gray;
+    border-radius: 14px;
+}
+
+#historial-container button {
+    height: 50px;
+    width: 280px;
+    margin-left: 30px;
+    margin-top: 12px;
+    background-color: rgb(30, 112, 30);
+    border: none;
+    border-radius: 15px;
+    font-family: "sans-serif";
+    font-size: 22px;
+    cursor: pointer;
+}
+
+ #btn-cerrar-historial {
+    margin-left: 40px !important;
+    background-color: rgb(167, 49, 49) !important;
+}
+
+
+#operation-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten al siguiente "renglón" */
+    gap: 5px; /* Espacio entre los elementos */
+}
+
+.item {
+    margin-left: 10px;
+    width: 180px; /* Toma el 50% del contenedor, restando el espacio */
+    background-color: rgb(105, 92, 92);
+    text-align: center;
+    border: none;
+    height: 40px;
+}
