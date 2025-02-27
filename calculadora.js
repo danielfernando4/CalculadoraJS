@@ -20,7 +20,6 @@ for (let i = 0; i < buttonsContainer.length - 3; i++) {
             isAnswer = false;
             isError = false;
         }
-
         printField.value += this.textContent;
     });
 }
@@ -45,11 +44,12 @@ cleanOneBtn.addEventListener("click", () => {
 
 
 equalBtn.addEventListener("click", () => {
-    const regex = /^\d+(\.\d+)?(\s*[-+*/]\s*\d+(\.\d+)?)*$/;
+    const regex = /^\d+(\.\d+)?(\s*[-+×÷]\s*\d+(\.\d+)?)*$/;
     //alert(regex.test(printField.value));
 
     if(regex.test(printField.value)){
-        const result = new Function("return " + printField.value);
+        let resultStr = printField.value.replace(/×/g, '*').replace(/÷/g, '/');
+        const result = new Function("return " + resultStr);
         printField.value = result();
         isAnswer = true;
     }else{
