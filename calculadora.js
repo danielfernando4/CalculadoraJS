@@ -1,9 +1,9 @@
 let btnContainer = document.getElementById("btn-container");
 let buttonsContainer = btnContainer.getElementsByTagName("button");
 
-let equalBtn = buttonsContainer[buttonsContainer.length - 1];
+let cleanOneBtn = buttonsContainer[buttonsContainer.length - 1];
 let cleanAllBtn = buttonsContainer[buttonsContainer.length - 2];
-let cleanOneBtn = buttonsContainer[buttonsContainer.length - 3];
+let equalBtn = buttonsContainer[buttonsContainer.length - 3];
 
 let printField = document.getElementById("result-field");
 printField.value = ""
@@ -45,7 +45,7 @@ cleanOneBtn.addEventListener("click", () => {
 
 
 equalBtn.addEventListener("click", () => {
-    const regex = /^\d+(\s*[-+*/]\s*\d+)*$/;
+    const regex = /^\d+(\.\d+)?(\s*[-+*/]\s*\d+(\.\d+)?)*$/;
     //alert(regex.test(printField.value));
 
     if(regex.test(printField.value)){
